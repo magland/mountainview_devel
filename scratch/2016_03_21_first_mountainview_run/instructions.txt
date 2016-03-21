@@ -1,0 +1,34 @@
+* Download the data
+./download_data.sh
+This should be around 2-3 GB. Let me know how long it ends up taking.
+
+* clone and compile mountainlab/mountainview
+https://github.com/magland/mountainlab/blob/master/README.md
+Don't worry about not having MATLAB. We'll get it for you later.
+Add mountainlab/mountainview/bin to your path, for convenience
+
+* Fire up the GUI pointing to the downloaded data
+mountainview --firings=data/firings.mda --raw=data/pre0.mda --filt=data/pre1b.mda --pre=data/pre2.mda
+
+You should see views that look kind of like the screenshots here:
+https://www.evernote.com/shard/s694/sh/2316a228-f683-4b08-b822-4709c1b2f908/a3cb03b1a72f7647a20dfceb8b620605
+
+Click around the GUI.
+Use the Actions buttons to open various views
+Double click a tab to move it to the other window -- need a better system.
+Several of the views are synchronized ... 
+
+Click the "timeseries data" button to open the most impressive widget which displays a huge data file
+without loading it into memory and allows very responsive real-time scrolling in/out.
+It loads chunks of data from disk as needed.
+Use the following controls for this widget:
+-- Mousewheel scroll: zoom in, zoom out
+-- +/- keys also zoom in, zoom out
+-- Click and drag to pan
+-- "0" to zoom back to full view
+-- Left/right arrow keys scroll left/right by one page
+-- Ctrl + left/right arrow keys move cursor left/right
+-- Right-click and drag to select a time interval
+-- ENTER to zoom in to the selected time interval
+-- up/down arrow keys do vertical zoom (on all views together)
+-- F (when clicked on a view) flips the channel ordering
